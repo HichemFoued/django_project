@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    create new topic
+{% endblock title %}
+
+{% block content %}
+    <h1>Hello Hichem</h1>
+    <div class="container">
+        <ul class="breadcrumb">
+            <li class="breadcrumb-item active"> <a href="{% url 'board_topic' board.pk%}">{{ board.name }}</a></li>
+            <li class="breadcrumb-item active">new topic</li>
+        </ul>
+    </div>
+{% endblock content %}
+
+
+{% block  foued %}
+
+<form method="post">
+    <label> subject</label>
+    <input type="text" name="subject" id="id_subject">
+</form>
+{% endblock  %}
